@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Coupon extends Model
+{
+    public $timestamps = false; // set time false
+    protected $fillable = [
+        'coupon_name', 'coupon_code', 'coupon_time', 'coupon_number', 'coupon_condition','coupon_day_start','coupon_day_end','coupon_status','coupon_used'
+    ];
+    protected $primaryKey = 'coupon_id';
+    protected $table = 'tbl_coupon';
+    use HasFactory;
+}
